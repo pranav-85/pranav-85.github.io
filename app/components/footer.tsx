@@ -12,7 +12,7 @@ export function Footer() {
       <div className="mx-auto max-w-5xl px-6">
         <Separator className="mb-6" />
         <p className="text-center text-sm text-muted-foreground">
-          © {year} Sai Pranav. Built with Next.js and shadcn/ui.
+          © {year} Sai Pranav. All rights reserved.
         </p>
       </div>
     </footer>

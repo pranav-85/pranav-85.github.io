@@ -9,12 +9,13 @@ const SECTIONS = [
   { href: "#about", label: "About", id: "about" },
   { href: "#skills", label: "Skills", id: "skills" },
   { href: "#projects", label: "Projects", id: "projects" },
+  { href: "#research", label: "Research", id: "research" },
   { href: "#experience", label: "Experience", id: "experience" },
   { href: "#contact", label: "Contact", id: "contact" },
 ] as const;
 
 export function Header() {
-  const activeSection = useActiveSection(SECTIONS.map((s) => s.id));
+  const activeSection = useActiveSection(["hero", ...SECTIONS.map((s) => s.id)]);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () => setIsOpen(false);
@@ -34,15 +35,13 @@ export function Header() {
           onClick={handleClose}
           className="
             inline-flex items-center justify-center
-            h-8 px-2 rounded-md
-            font-mono text-base font-semibold
+            px-2 rounded-md
+            font-bold text-4xl
             transition-transform hover:scale-105
           "
         >
-          <span className="flex items-center gap-0.5 text-lg">
-            <span className="text-accent">&lt;</span>
-            SP
-            <span className="text-accent">/&gt;</span>
+          <span className="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+            Pranav.
           </span>
         </NavLink>
 

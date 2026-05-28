@@ -13,7 +13,7 @@ const EDUCATION = [
     institute: "Indian Institute of Information Technology Design and Manufacturing, Kancheepuram",
     degree: "B.Tech in Computer Science Engineering",
     period: "2022 – 2026",
-    extra: "CGPA: 8.16 / 10",
+    extra: "CGPA: 8.22 / 10",
   },
   {
     institute: "Narayana Junior College, Hyderabad",

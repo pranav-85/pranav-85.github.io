@@ -5,7 +5,7 @@ import { Mail, Github, Linkedin } from "lucide-react";
 const LINKS = [
   { href: "mailto:msaipranav2004@gmail.com", label: "Email", icon: Mail },
   { href: "https://github.com/pranav-85", label: "GitHub", icon: Github },
-  { href: "https://www.linkedin.com/in/sai-pranav-m-3340a0251/", label: "LinkedIn", icon: Linkedin },
+  { href: "https://www.linkedin.com/in/sai-pranav-madupu-3340a0251/", label: "LinkedIn", icon: Linkedin },
 ] as const;
 
 export function Contact() {

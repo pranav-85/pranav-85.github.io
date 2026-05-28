@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FileText, FolderGit2 } from "lucide-react";
 import { TypingRole } from "./typing-role";
 import { CodeStreamBackground } from "./code-stream-background";
+import { NavLink } from "./nav-link";
 
 export function Hero() {
   return (
@@ -29,20 +28,9 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-4xl">
         <div className="flex flex-col items-center gap-4 md:gap-6">
-          <div className="flex items-center justify-center gap-4 md:gap-6">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
-              Sai Pranav
-            </h1>
-            <div className="relative h-20 w-20 md:h-28 md:w-28">
-              <Image
-                src="/portfolio-pranav/giyuu-gif.gif"
-                alt="Playful avatar illustration"
-                fill
-                priority
-                className="rounded-full object-cover"
-              />
-            </div>
-          </div>
+          <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+            Sai Pranav Madupu
+          </h1>
 
           <TypingRole />
         </div>
@@ -54,23 +42,27 @@ export function Hero() {
           <Button
             asChild
             size="lg"
-            className="min-w-[160px] transition-opacity hover:opacity-90"
+            className="min-w-40 transition-all duration-300 hover:opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-accent/50"
           >
-            <Link href="#projects">
+            <NavLink href="#projects">
               <FolderGit2 className="size-4" aria-hidden />
               View Projects
-            </Link>
+            </NavLink>
           </Button>
           <Button
             asChild
-            variant="outline"
+            variant="secondary"
             size="lg"
-            className="min-w-[160px] transition-opacity hover:opacity-90"
+            className="min-w-40 transition-all duration-300 hover:opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-accent/50"
           >
-            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              <FileText className="size-4" aria-hidden />
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2"
+            >
               Resume
-            </Link>
+            </a>
           </Button>
         </div>
       </div>
